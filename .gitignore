@@ -1,0 +1,14 @@
+node_modules
+dist
+.env
+.env.*
+.DS_Store
+*.log
+.vite
+.turbo
+
+# Solana / Anchor
+.anchor
+target
+test-ledger
+

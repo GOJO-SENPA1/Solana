@@ -1,0 +1,239 @@
+.page {
+  width: 1126px;
+  max-width: 100%;
+  margin: 0 auto;
+  min-height: 100svh;
+  box-sizing: border-box;
+  padding: 20px;
+}
+
+.top {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+  margin-bottom: 18px;
+}
+
+.brand {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  min-width: 0;
+}
+
+.logoMark {
+  width: 40px;
+  height: 40px;
+  border-radius: 12px;
+  background: radial-gradient(circle at 30% 30%, var(--accent), transparent 60%),
+    linear-gradient(135deg, rgba(255, 255, 255, 0.06), rgba(255, 255, 255, 0));
+  border: 1px solid var(--border);
+}
+
+.brandText {
+  min-width: 0;
+}
+
+.brandName {
+  font-weight: 650;
+  color: var(--text-h);
+  letter-spacing: -0.2px;
+}
+
+.brandTag {
+  font-size: 13px;
+  opacity: 0.85;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.tabs {
+  display: flex;
+  gap: 8px;
+}
+
+.tab {
+  border: 1px solid var(--border);
+  background: transparent;
+  color: var(--text-h);
+  border-radius: 10px;
+  padding: 8px 12px;
+  cursor: pointer;
+}
+
+.tab.active {
+  background: var(--accent-bg);
+  border-color: var(--accent-border);
+}
+
+.main {
+  display: grid;
+  grid-template-columns: 1.2fr 0.8fr;
+  gap: 16px;
+  align-items: start;
+}
+
+.card {
+  border: 1px solid var(--border);
+  border-radius: 14px;
+  padding: 16px;
+  background: rgba(255, 255, 255, 0.02);
+}
+
+.side {
+  position: sticky;
+  top: 16px;
+}
+
+h1 {
+  margin: 0 0 8px;
+  font-size: 28px;
+}
+
+.muted {
+  opacity: 0.85;
+  margin-bottom: 14px;
+}
+
+.small {
+  font-size: 13px;
+}
+
+.mono {
+  font-family: var(--mono);
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 12px;
+}
+
+.field {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.field > span {
+  font-size: 13px;
+  color: var(--text-h);
+  opacity: 0.9;
+}
+
+.field input,
+.field select {
+  border: 1px solid var(--border);
+  background: transparent;
+  color: var(--text-h);
+  border-radius: 10px;
+  padding: 10px 12px;
+}
+
+.field.full {
+  grid-column: 1 / -1;
+}
+
+.actions {
+  display: flex;
+  gap: 10px;
+  margin-top: 14px;
+  flex-wrap: wrap;
+}
+
+button.primary,
+button.ghost,
+button.danger {
+  border-radius: 10px;
+  padding: 10px 12px;
+  cursor: pointer;
+  border: 1px solid var(--border);
+  color: var(--text-h);
+  background: transparent;
+}
+
+button.primary {
+  background: var(--accent-bg);
+  border-color: var(--accent-border);
+}
+
+button.danger {
+  border-color: rgba(255, 99, 99, 0.45);
+  background: rgba(255, 99, 99, 0.09);
+}
+
+button:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+}
+
+.alert {
+  margin-top: 12px;
+  border: 1px solid rgba(255, 99, 99, 0.35);
+  background: rgba(255, 99, 99, 0.08);
+  border-radius: 12px;
+  padding: 10px 12px;
+  font-family: var(--mono);
+  font-size: 13px;
+  overflow: auto;
+}
+
+.result {
+  margin-top: 14px;
+  border-top: 1px solid var(--border);
+  padding-top: 12px;
+}
+
+.row {
+  display: grid;
+  grid-template-columns: 160px 1fr;
+  gap: 12px;
+  padding: 6px 0;
+}
+
+.k {
+  font-size: 13px;
+  opacity: 0.85;
+}
+
+.v {
+  color: var(--text-h);
+  overflow-wrap: anywhere;
+}
+
+.pill {
+  display: inline-flex;
+  width: fit-content;
+  padding: 4px 10px;
+  border-radius: 999px;
+  border: 1px solid var(--border);
+}
+
+.hr {
+  height: 1px;
+  background: var(--border);
+  margin: 12px 0;
+}
+
+.list {
+  margin: 10px 0 0;
+  padding-left: 18px;
+}
+
+@media (max-width: 980px) {
+  .main {
+    grid-template-columns: 1fr;
+  }
+  .side {
+    position: static;
+  }
+  .row {
+    grid-template-columns: 1fr;
+    gap: 4px;
+  }
+  .grid {
+    grid-template-columns: 1fr;
+  }
+}
